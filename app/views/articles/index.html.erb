@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <%= link_to "New Post", new_article_path(@article), class: 'btn btn-success me-3' %>
+      <% @articles.each do |art| %>
+        <div class="alert alert-light">
+          <h3>
+            <%= art.headline %>
+          </h3>
+        </div>
+        <div class="text-muted">
+          <%= art.created_at %>
+        </div>
+        <div class="form-group"></div>
+        <br/>
+        <%= link_to 'Show', article_path(art), class: 'btn btn-primary' %>
+        <%= link_to 'Edit', edit_article_path(art), class: 'btn btn-success' %>
+        <%= button_to "Destroy", art, method: :delete, class: 'btn btn-danger' %>
+        <hr/>
+      <% end %>
+    </div>
+  </div>
+</div>
