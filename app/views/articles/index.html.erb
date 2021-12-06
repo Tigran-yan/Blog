@@ -18,11 +18,14 @@
         </div>
         <div class="form-group"></div>
         <br/>
+        <div>
         <%= link_to 'Show', article_path(art), class: 'btn btn-primary' %>
         <%= link_to 'Edit', edit_article_path(art), class: 'btn btn-success' %>
         <%= button_to "Destroy", art, method: :delete, class: 'btn btn-danger' %>
+        </div>
         <hr/>
       <% end %>
     </div>
   </div>
 </div>
+
